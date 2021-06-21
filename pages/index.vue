@@ -10,10 +10,14 @@
               </h1>
             </div>
             <div class="flex-initial md:pl-4">
-              <img :src="image.me" alt="My Memoji" class="w-full md:w-2/3 h-auto md:py-4">
+              <img
+                :src="image.me"
+                alt="My Memoji"
+                class="w-full md:w-2/3 h-auto md:py-4"
+              >
             </div>
           </div>
-          
+
           <p class="text-base py-2 md:w-2/3">
             Not a CS student, don't work in IT industry, but most of the time I do web development. Always love to be working on a cool project 😉
           </p>
@@ -89,8 +93,8 @@ export default {
       repositories: [],
       repoRequest: false,
       image: {
-        me: 'me.png'
-      }
+        me: 'me.png',
+      },
     };
   },
   async mounted() {
@@ -104,15 +108,15 @@ export default {
         targets: '.repository',
         opacity: [
           {value: 0, duration: 500, delay: 500},
-          {value: 100, duration: 2500}
+          {value: 100, duration: 2500},
         ],
         translateY: [
           {value: 1000, duration: 500, delay: 800},
-          {value: 0, duration: 2500}
+          {value: 0, duration: 2500},
         ],
         delay: this.$anime.stagger(300, {start: 0, from: 'first', easing: 'spring'}),
       });
-    } catch (error) {
+    } catch {
       this.repoRequest = false;
     }
   },
