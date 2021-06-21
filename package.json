@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate",
-    "lint": "eslint --fix --ext .vue,.js --ignore-path .gitignore ."
+    "lint": "eslint --fix --ext .vue,.js --ignore-path .gitignore .",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,10 +20,13 @@
   },
   "homepage": "https://github.com/aldy505/code#readme",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@nuxtjs/axios": "^5.13.6",
     "eslint": "^7.29.0",
     "eslint-config-xo-space": "^0.28.0",
     "eslint-plugin-vue": "^7.11.1",
+    "husky": "^6.0.0",
     "nuxt": "^2.15.7",
     "nuxt-animejs": "^1.2.1",
     "nuxt-vite": "^0.1.1",
