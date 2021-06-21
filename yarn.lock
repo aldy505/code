@@ -6448,10 +6448,10 @@ nuxt-vite@^0.1.1:
     vite "^2.3.4"
     vite-plugin-vue2 "^1.5.1"
 
-nuxt-windicss@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-1.0.3.tgz#1983e242894acbc440cb29b64e48ff81a6678bc0"
-  integrity sha512-soAW3WctB+vqe3CwuRuaXVE8kiMwxhiztA1s7N7SEBTrME8UGdYHDpHAA1UU8nZrAoKqaIln1xlFnORhVcEuDA==
+nuxt-windicss@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-1.0.6.tgz#d45cfb536ca146b917e0ea6acd1a09dd46975870"
+  integrity sha512-cZEzIvtSqVm4C6ErudeX9OnrYoxith2hHFBWVI74KsrCZze+WDMu6UlMcCJPQn2fviUzMJ72gJ5whBiocJ2QxQ==
   dependencies:
     clear-module "^4.1.1"
     defu "^4.0.1"
