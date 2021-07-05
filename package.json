@@ -4,8 +4,8 @@
   "description": "Website for code.reinaldyrafli.com",
   "main": "index.js",
   "scripts": {
-    "dev": "nuxt",
-    "generate": "nuxt generate",
+    "dev": "vite",
+    "generate": "vite build",
     "lint": "eslint --fix --ext .vue,.js --ignore-path .gitignore .",
     "postinstall": "husky install"
   },
