@@ -4,7 +4,6 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:vue/strongly-recommended',
     'xo-space',
   ],
   parserOptions: {
@@ -12,7 +11,6 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'vue',
   ],
   rules: {
   },
