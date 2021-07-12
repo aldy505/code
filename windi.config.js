@@ -1,8 +1,9 @@
-// @ts-check - enable TS check for js file
-import {defineConfig} from 'windicss/helpers';
-import aspectRatio from 'windicss/plugin/aspect-ratio';
+const aspectRatio = require('windicss/plugin/aspect-ratio');
 
-export default defineConfig({
+/**
+ * @type {import('windicss/helpers').defineConfig}
+ */
+module.exports = {
   darkMode: 'media',
   theme: {
     fontFamily: {
@@ -143,4 +144,4 @@ export default defineConfig({
   plugins: [
     aspectRatio,
   ],
-});
+};

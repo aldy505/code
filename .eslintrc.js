@@ -4,16 +4,18 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:vue/strongly-recommended',
     'xo-space',
   ],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: [
-    'vue',
   ],
   rules: {
+    'capitalized-comments': ['off'],
   },
 };
