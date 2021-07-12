@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import {createEffect, createMemo, createSignal, For, onMount, Show, Suspense} from 'solid-js';
+import {createSignal, For, onMount, Show} from 'solid-js';
 import anime from 'animejs';
 // eslint-disable-next-line no-unused-vars
 import MadeWithLove from '../components/MadeWithLove';
