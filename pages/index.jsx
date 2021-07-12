@@ -1,36 +1,43 @@
 // eslint-disable-next-line no-unused-vars
-import {createMemo, For, onMount, Suspense} from 'solid-js';
+import {createEffect, createMemo, createSignal, For, onMount, Show, Suspense} from 'solid-js';
 import anime from 'animejs';
-import axios from 'axios';
+// eslint-disable-next-line no-unused-vars
+import MadeWithLove from '../components/MadeWithLove';
+// eslint-disable-next-line no-unused-vars
+import Repository from '../components/Repository';
+import getRepositories from '../components/GetRepositories';
+
+const image = {
+  me: 'me.png',
+};
 
 function Index() {
-  const image = {
-    me: 'me.png',
-  };
+  const [repositories, setRepositories] = createSignal({});
+  const [repoRequest, setRepoRequest] = createSignal(false);
 
-  const repositories = createMemo(async () => {
-    const response = (await axios.get('https://api.github.com/users/aldy505/repos')).data;
-    const randNumber = Math.random() * (response.length - 5);
-    return response.sort().slice(randNumber, randNumber + 5);
-  });
-
-  onMount(() => {
-    anime({
-      targets: '.repository',
-      opacity: [
-        {value: 0, duration: 500, delay: 500},
-        {value: 100, duration: 2500},
-      ],
-      translateY: [
-        {value: 1000, duration: 500, delay: 800},
-        {value: 0, duration: 2500},
-      ],
-      delay: this.$anime.stagger(300, {start: 0, from: 'first', easing: 'spring'}),
-    });
+  onMount(async () => {
+    try {
+      const repos = await getRepositories();
+      setRepositories(repos);
+      setRepoRequest(true);
+      anime({
+        targets: '.repository',
+        opacity: [
+          {value: 0, duration: 500, delay: 500},
+          {value: 100, duration: 4000},
+        ],
+        translateY: [
+          {value: 800, duration: 500, delay: 800},
+          {value: 0, duration: 4000},
+        ],
+      });
+    } catch {
+      setRepoRequest(false);
+    }
   });
 
   return (
-    <div class="bg-cool-gray-900 text-white min-h-screen min-w-full h-full w-full font-body">
+    <div className="bg-cool-gray-900 text-white min-h-screen min-w-full h-full w-full font-body">
       <div class="container mx-auto px-10 md:px-20 lg:px-32">
         <div class="h-full lg:min-h-screen flex flex-col lg:flex-row items-center justify-content">
           <div class="flex-1 pt-12 pb-4 md:pt-0 md:pb-0">
@@ -57,19 +64,19 @@ function Index() {
               <li>
                 <a
                   href="mailto:aldy505@tutanota.com"
-                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100"
+                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100 transition duration-500 ease-in-out"
                 >Email</a>
               </li>
               <li>
                 <a
                   href="https://www.github.com/aldy505"
-                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100"
+                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100 transition duration-500 ease-in-out"
                 >Github</a>
               </li>
               <li>
                 <a
                   href="https://t.me/aldy505"
-                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100"
+                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100 transition duration-500 ease-in-out"
                 >Telegram</a>
               </li>
             </ul>
@@ -80,7 +87,7 @@ function Index() {
           </div>
 
           <div class="flex-1 pl-0 lg:pl-12">
-            <Suspense fallback={<div></div>}>
+            <Show when={repoRequest()} fallback={<div></div>}>
               <div class="repository">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 place-content-center">
                   <For each={repositories()}>{repo =>
@@ -95,7 +102,7 @@ function Index() {
                     </div>
                   }</For>
                   <div class="line">
-                    <p class="text-sm opacity-75 hover:opacity-100 hover:text-blue-100 hover:underline md:pb-0 pb-4">
+                    <p class="text-sm opacity-75 hover:opacity-100 hover:text-blue-100 hover:underline md:pb-0 pb-4 transition duration-500 ease-in-out">
                       <a href="https://www.github.com/aldy505">
                         Explore more on Github &mdash;&gt;
                       </a>
@@ -103,7 +110,7 @@ function Index() {
                   </div>
                 </div>
               </div>
-            </Suspense>
+            </Show>
           </div>
 
           <div class="flex-initial md:hidden py-4">

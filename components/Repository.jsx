@@ -1,44 +1,44 @@
-function Repository({url, name, stars, language, description}) {
-  const image = {
-    folder: 'folder.svg',
-    star: 'star.svg',
-  };
+const image = {
+  folder: 'folder.svg',
+  star: 'star.svg',
+};
 
-  function getLanguageColor() {
-    if (!language) {
-      return;
-    }
-
-    switch (language.toLowerCase()) {
-      case 'go':
-        return '#a1d5ed';
-
-      case 'julia':
-        return '#d35bde';
-
-      case 'javascript':
-        return '#e4f060';
-
-      case 'typescript':
-        return '#4e85de';
-
-      case 'vue':
-        return '#4ede85';
-
-      case 'shell':
-        return '#9dde4e';
-
-      case 'html':
-        return '#de704e';
-
-      default:
-        return '#bab7b6';
-    }
+function getLanguageColor(language) {
+  if (!language) {
+    return;
   }
 
+  switch (language.toLowerCase()) {
+    case 'go':
+      return '#a1d5ed';
+
+    case 'julia':
+      return '#d35bde';
+
+    case 'javascript':
+      return '#e4f060';
+
+    case 'typescript':
+      return '#4e85de';
+
+    case 'vue':
+      return '#4ede85';
+
+    case 'shell':
+      return '#9dde4e';
+
+    case 'html':
+      return '#de704e';
+
+    default:
+      return '#bab7b6';
+  }
+}
+
+function Repository({url, name, stars, language, description}) {
   return (
     <div class="flex flex-col py-4 px-2 lg:px-0 hover:opacity-100">
-      <div class="flex-1 text-sm hover:text-blue-300 font-bold">
+      <div class="flex-1 text-sm hover:text-blue-300 font-bold transition duration-500 ease-in-out">
         <a href={url}>
           <div class="flex flex-row items-center">
             <div class="flex-initial">
@@ -71,7 +71,7 @@ function Repository({url, name, stars, language, description}) {
                     cx="50"
                     cy="50"
                     r="40"
-                    fill={getLanguageColor()}
+                    fill={getLanguageColor(language)}
                   />
                 </svg>
               </div>

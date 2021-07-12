@@ -86,10 +86,9 @@ export default {
     {rel: 'icon', type: 'image/svg', href: 'favicon.svg'},
   ],
   script: [
-    {src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': process.env.CLOUDFLARE_TOKEN, defer: true},
+    {src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "2a03659d407a47e282375a70a91bdfc4"}', defer: true},
   ],
   meta: [
-    {charset: 'utf-8'},
     {name: 'viewport', content: 'width=device-width, initial-scale=1'},
     ...prepareMeta(),
   ],

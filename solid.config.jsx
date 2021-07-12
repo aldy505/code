@@ -1,11 +1,12 @@
 import {lazy} from 'solid-js';
 import {render} from 'solid-js/web';
+import 'virtual:windi.css';
 // eslint-disable-next-line no-unused-vars
-import {Router} from 'solid-app-router';
+import {Router, Route} from 'solid-app-router';
 // eslint-disable-next-line no-unused-vars
 import Default from './layouts/default.jsx';
 
-const routes = [
+const route = [
   {
     path: '/',
     component: () => lazy(() => import('./pages/index.jsx')),
@@ -17,6 +18,8 @@ const routes = [
 ];
 
 render(() => (
-  <Router routes={routes}><Default /></Router>
-), document.getElementById('app'));
+  <Router routes={route}>
+    <Default />
+  </Router>
+), document.getElementById('root'));
 

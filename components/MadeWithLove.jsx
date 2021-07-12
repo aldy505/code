@@ -1,9 +1,9 @@
 function MadeWithLove() {
   return (
     <>
-      <div class="text-xs opacity-75 hover:opacity-100">
+      <div class="text-xs opacity-75 hover:opacity-100 transition duration-500 ease-in-out">
         <p>
-          Made with
+          Made with&nbsp;
           <svg
             class="inline"
             viewBox="0 0 1792 1792"
@@ -16,11 +16,11 @@ function MadeWithLove() {
               fill="#e25555"
             />
           </svg>
-          in Indonesia.
+          &nbsp;in Indonesia.
         </p>
         <p>
           Source code available on <a
-            class="hover:underline"
+            class="hover:underline transition duration-350 ease-in-out"
             href="https://www.github.com/aldy505/code"
           >Github.</a>
         </p>
