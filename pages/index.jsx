@@ -5,6 +5,8 @@ import anime from 'animejs';
 import MadeWithLove from '../components/MadeWithLove';
 // eslint-disable-next-line no-unused-vars
 import Repository from '../components/Repository';
+// eslint-disable-next-line no-unused-vars
+import LinkList from '../components/LinkList';
 import getRepositories from '../components/GetRepositories';
 
 const image = {
@@ -14,6 +16,24 @@ const image = {
 function Index() {
   const [repositories, setRepositories] = createSignal({});
   const [repoRequest, setRepoRequest] = createSignal(false);
+
+  const link = [
+    {
+      link: 'mailto:aldy505@tutanota.com',
+      text: 'Email',
+      subtext: 'Get in touch!',
+    },
+    {
+      link: 'https://www.github.com/aldy505',
+      text: 'Github',
+      subtext: 'See my projects & libraries!',
+    },
+    {
+      link: 'https://t.me/aldy505',
+      text: 'Telegram',
+      subtext: 'Another way to get in touch!',
+    },
+  ];
 
   onMount(async () => {
     try {
@@ -37,7 +57,7 @@ function Index() {
   });
 
   return (
-    <div className="bg-cool-gray-900 text-white min-h-screen min-w-full h-full w-full font-body">
+    <div class="bg-cool-gray-900 text-white min-h-screen min-w-full h-full w-full font-body">
       <div class="container mx-auto px-10 md:px-20 lg:px-32">
         <div class="h-full lg:min-h-screen flex flex-col lg:flex-row items-center justify-content">
           <div class="flex-1 pt-12 pb-4 md:pt-0 md:pb-0">
@@ -61,24 +81,9 @@ function Index() {
             </p>
 
             <ul class="list-none text-base py-2">
-              <li>
-                <a
-                  href="mailto:aldy505@tutanota.com"
-                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100 transition duration-500 ease-in-out"
-                >Email</a>
-              </li>
-              <li>
-                <a
-                  href="https://www.github.com/aldy505"
-                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100 transition duration-500 ease-in-out"
-                >Github</a>
-              </li>
-              <li>
-                <a
-                  href="https://t.me/aldy505"
-                  class="opacity-75 hover:opacity-100 hover:underline-light-300 hover:text-blue-100 transition duration-500 ease-in-out"
-                >Telegram</a>
-              </li>
+              <For each={link}>{item =>
+                <LinkList link={item.link} text={item.text} subtext={item.subtext}></LinkList>
+              }</For>
             </ul>
 
             <div class="text-sm py-2 hidden md:block">

@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9d8edaee380a43bcb89a28222c34a4b0)](https://www.codacy.com/gh/aldy505/code/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aldy505/code&amp;utm_campaign=Badge_Grade) [![CodeFactor](https://www.codefactor.io/repository/github/aldy505/code/badge)](https://www.codefactor.io/repository/github/aldy505/code) [![Build](https://github.com/aldy505/code/actions/workflows/ci.yml/badge.svg)](https://github.com/aldy505/code/actions/workflows/ci.yml) [![GitHub license](https://img.shields.io/github/license/aldy505/code)](https://github.com/aldy505/code)
 
-Codebase for [code.reinaldyrafli.com](https://code.reinaldyrafli.com). Written in Nuxt.js, deployed on Cloudflare Pages.
+Codebase for [code.reinaldyrafli.com](https://code.reinaldyrafli.com). Written on [Solid](solidjs.com) and deployed on Cloudflare Pages.
 
 ## Contributing
 

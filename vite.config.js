@@ -8,7 +8,7 @@ export default defineConfig({
     solidPlugin(),
     windiCSS({
       scan: {
-        dirs: ['.'],
+        dirs: ['./components', './layouts', './pages'],
       },
     }),
   ],
