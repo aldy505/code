@@ -10,8 +10,8 @@ See [CONTRIBUTING](https://github.com/aldy505/code/blob/master/CONTRIBUTING.md)
 
 ## License
 
+```
 Code is a codebase for code.reinaldyrafli.com
-
 Copyright (C) 2021-present Reinaldy Rafli
 
 This program is free software: you can redistribute it and/or modify
@@ -26,3 +26,4 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
+```

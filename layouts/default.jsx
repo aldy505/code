@@ -5,6 +5,7 @@ import {For} from 'solid-js';
 // eslint-disable-next-line no-unused-vars
 import {MetaProvider, Title, Link, Meta} from 'solid-meta';
 import head from '../config/head.js';
+import '@fontsource/poppins';
 
 function Default() {
   return (
