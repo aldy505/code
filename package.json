@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "generate": "vite build",
-    "lint": "eslint --fix --ext .vue,.js --ignore-path .gitignore .",
+    "lint": "eslint --fix --ext .jsx,.js --ignore-path .gitignore .",
     "postinstall": "husky install"
   },
   "repository": {
@@ -23,19 +23,19 @@
     "@fontsource/poppins": "^4.5.0",
     "animejs": "^3.2.1",
     "axios": "^0.21.1",
-    "solid-app-router": "^0.1.2",
-    "solid-js": "^1.0.4",
-    "solid-meta": "^0.27.0"
+    "solid-app-router": "^0.1.3",
+    "solid-js": "^1.0.7",
+    "solid-meta": "^0.27.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "eslint": "^7.31.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "eslint": "^7.32.0",
     "eslint-config-xo-space": "^0.28.0",
     "husky": "^7.0.1",
-    "vite": "^2.4.3",
+    "vite": "^2.4.4",
     "vite-plugin-solid": "^2.0.1",
-    "vite-plugin-windicss": "^1.2.5",
-    "windicss": "^3.1.5"
+    "vite-plugin-windicss": "^1.2.7",
+    "windicss": "^3.1.6"
   }
 }
