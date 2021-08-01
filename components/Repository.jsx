@@ -35,7 +35,7 @@ function getLanguageColor(language) {
   }
 }
 
-function Repository({url, name, stars, language, description}) {
+function Repository({ url, name, stars, language, description }) {
   return (
     <div class="flex flex-col py-4 px-2 lg:px-0 opacity-80 hover:opacity-100 transition duration-500 ease-in-out">
       <div class="flex-1 text-sm hover:text-blue-300 font-bold transition duration-500 ease-in-out">

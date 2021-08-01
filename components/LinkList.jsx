@@ -1,6 +1,6 @@
-import {createSignal} from 'solid-js';
+import { createSignal } from 'solid-js';
 
-function LinkList({link, text, subtext}) {
+function LinkList({ link, text, subtext }) {
   const [hoverState, setHoverState] = createSignal(false);
   return (
     <li

@@ -17,5 +17,6 @@ module.exports = {
   ],
   rules: {
     'capitalized-comments': ['off'],
+    'object-curly-spacing': ['error', 'always'],
   },
 };

@@ -80,16 +80,16 @@ export default {
     lang: 'en',
   },
   link: [
-    {rel: 'preconnect', href: 'https://fonts.gstatic.com'},
-    {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'},
-    {rel: 'icon', type: 'image/png', href: 'favicon.png'},
-    {rel: 'icon', type: 'image/svg', href: 'favicon.svg'},
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap' },
+    { rel: 'icon', type: 'image/png', href: 'favicon.png' },
+    { rel: 'icon', type: 'image/svg', href: 'favicon.svg' },
   ],
   script: [
-    {src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "2a03659d407a47e282375a70a91bdfc4"}', defer: true},
+    { src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "2a03659d407a47e282375a70a91bdfc4"}', defer: true },
   ],
   meta: [
-    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ...prepareMeta(),
   ],
 };
