@@ -1,4 +1,4 @@
-import type { GithubRepository } from "./github";
+import { GithubRepository } from './github';
 
 export type Stack =
   'bootstrap' |

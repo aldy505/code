@@ -1,6 +1,6 @@
 import { For, Show } from 'solid-js';
 import Icons from './Icons';
-import type { Project } from "../types/project";
+import { Project } from '../types/project';
 import { NavLink } from 'solid-app-router';
 import { convertCase } from '../config/case';
 
@@ -53,7 +53,7 @@ function ProjectCard(project: Project) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default ProjectCard;

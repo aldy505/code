@@ -1,4 +1,4 @@
-import type { MetaItem } from "../types/meta";
+import { MetaItem } from '../types/meta';
 
 const config = {
   title: 'Reinaldy Rafli - Code',

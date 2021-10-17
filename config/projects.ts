@@ -1,4 +1,4 @@
-import type { Project } from "../types/project";
+import { Project } from '../types/project';
 
 const projects: Project[] = [
   {
@@ -101,7 +101,7 @@ const projects: Project[] = [
     description: 'Simple Pastebin clone with POST request support & secure compression',
     repository: 'https://github.com/teknologi-umum/polarite',
     website: 'https://polarite.teknologiumum.com',
-    role: 'author'
+    role: 'author',
   },
   {
     id: 12,
@@ -138,7 +138,7 @@ const projects: Project[] = [
     title: 'SQL DSL',
     description: 'Mapped SQL query & argument from a template literal',
     repository: 'https://github.com/aldy505/sql-dsl',
-    role: 'author'
+    role: 'author',
   },
   {
     id: 18,
@@ -147,7 +147,7 @@ const projects: Project[] = [
     title: 'Sentry Fiber',
     description: 'Unofficial Fiber handler for Sentry SDK',
     repository: 'https://github.com/aldy505/sentry-fiber',
-    role: 'author'
+    role: 'author',
   },
   {
     id: 19,
@@ -157,7 +157,7 @@ const projects: Project[] = [
     description: 'Humans-utils specifically for Indonesian locale',
     repository: 'https://github.com/teknologi-umum/manusier',
     role: 'author',
-  }
+  },
 ];
 
 export default projects;

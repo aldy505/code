@@ -16,6 +16,6 @@ export default defineConfig({
     target: 'esnext',
     polyfillDynamicImport: false,
     emptyOutDir: true,
-    outDir: 'dist'
+    outDir: 'dist',
   },
 });

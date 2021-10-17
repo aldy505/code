@@ -1,4 +1,4 @@
-import type { GithubRepository } from "../types/github";
+import { GithubRepository } from '../types/github';
 
 async function getRepositories(): Promise<GithubRepository[]> {
   try {

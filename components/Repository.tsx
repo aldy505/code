@@ -1,4 +1,4 @@
-import type { GithubLanguage, GithubRepository } from "../types/github";
+import { GithubLanguage } from '../types/github';
 
 const image = {
   folder: 'folder.svg',

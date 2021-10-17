@@ -8,7 +8,7 @@ export default defineConfig({
     fontFamily: {
       display: ['Poppins', 'Inter', 'Roboto', 'sans-serif'],
       body: ['Poppins', 'Inter', 'Roboto', 'sans-serif'],
-      code: ['IBM Plex Mono', 'JetBrains Mono', 'SF Mono', 'Consolas', 'monospace']
+      code: ['IBM Plex Mono', 'JetBrains Mono', 'SF Mono', 'Consolas', 'monospace'],
     },
     extend: {
       colors: {

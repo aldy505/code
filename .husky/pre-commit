@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint
+npx eslint --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore .

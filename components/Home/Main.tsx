@@ -21,7 +21,6 @@ const link = [
   },
 ];
 
-
 function Home() {
   return (
     <div class="h-full lg:min-h-screen flex flex-col lg:flex-row items-center justify-around">
@@ -58,7 +57,7 @@ function Home() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
 export default Home;
