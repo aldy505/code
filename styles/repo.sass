@@ -1,0 +1,40 @@
+@mixin headers($size: 1rem)
+  @apply font-bold py-2
+  font-size: $size
+  line-height: $size * 1.5
+
+.repoContent
+  h1
+    @include headers($size: 1.75rem)
+
+  h2
+    @include headers($size: 1.5rem)
+
+  h3
+    @include headers($size: 1.25rem)
+
+  h4
+    @include headers($size: 1.125rem)
+
+  a
+    @apply text-royalblue-500 underline underline-opacity-20 underline-royalblue-600 hover:(text-royalblue-700 underline-opacity-100)
+    @apply dark:(text-royalblue-300 underline-royalblue-400 hover:text-royalblue-500)
+    @apply transition duration-300 ease-in-out cursor-pointer
+
+  p
+    @apply text-base py-1 break-words whitespace-normal
+
+  pre
+    @apply font-code bg-denim-900 w-full h-full p-4 text-white container overflow-auto rounded
+
+  code
+    @apply font-code bg-denim-900 text-white w-full py-0\.5 px-1 rounded text-sm
+
+  table
+    @apply table overflow-x-auto overscroll-auto w-full flow-root py-2
+
+  ul
+    @apply list-disc list-outside
+
+  ol
+    @apply list-decimal list-outside

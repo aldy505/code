@@ -1,3 +1,5 @@
+import type { MetaItem } from "../types/meta";
+
 const config = {
   title: 'Reinaldy Rafli - Code',
   description: 'Reinaldy Rafli is a full stack web developer based in Indonesia.',
@@ -7,7 +9,7 @@ const config = {
 };
 
 function prepareMeta() {
-  const meta = [];
+  const meta: MetaItem[] = [];
 
   meta.push(
     {
@@ -80,8 +82,6 @@ export default {
     lang: 'en',
   },
   link: [
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap' },
     { rel: 'icon', type: 'image/png', href: 'favicon.png' },
     { rel: 'icon', type: 'image/svg', href: 'favicon.svg' },
   ],

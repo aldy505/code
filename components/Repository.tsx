@@ -1,9 +1,11 @@
+import type { GithubLanguage, GithubRepository } from "../types/github";
+
 const image = {
   folder: 'folder.svg',
   star: 'star.svg',
 };
 
-function getLanguageColor(language) {
+function getLanguageColor(language: GithubLanguage) {
   if (!language) {
     return;
   }
@@ -35,27 +37,35 @@ function getLanguageColor(language) {
   }
 }
 
-function Repository({ url, name, stars, language, description }) {
+interface Props {
+  url: string;
+  name: string;
+  description: string;
+  language: string;
+  stars: number;
+}
+
+function Repository(props: Partial<Props>) {
   return (
     <div class="flex flex-col py-4 px-2 lg:px-0 opacity-80 hover:opacity-100 transition duration-500 ease-in-out">
       <div class="flex-1 text-sm hover:text-blue-300 font-bold transition duration-500 ease-in-out">
-        <a href={url}>
+        <a href={props.url}>
           <div class="flex flex-row items-center">
             <div class="flex-initial">
               <img
                 src={image.folder}
-                class="text-white h-3 w-3 fill-current inline"
+                class="text-black dark:text-white h-3 w-3 fill-current inline"
                 alt="Repository"
               />
             </div>
             <div class="flex-initial px-4">
-              { name }
+              { props.name }
             </div>
           </div>
         </a>
       </div>
       <div class="flex-2 text-xs opacity-80 lg:w-2/3">
-        { description }
+        { props.description }
       </div>
       <div class="flex-1">
         <div class="flex flex-row items-center">
@@ -71,12 +81,12 @@ function Repository({ url, name, stars, language, description }) {
                     cx="50"
                     cy="50"
                     r="40"
-                    fill={getLanguageColor(language)}
+                    fill={getLanguageColor(props.language as GithubLanguage)}
                   />
                 </svg>
               </div>
               <div class="flex-initial px-2">
-                { language }
+                { props.language }
               </div>
             </div>
           </div>
@@ -93,7 +103,7 @@ function Repository({ url, name, stars, language, description }) {
                 />
               </div>
               <div class="flex-initial px-2">
-                { stars }
+                { props.stars }
               </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
-import axios from 'axios';
+import type { GithubRepository } from "../types/github";
 
-async function getRepositories() {
+async function getRepositories(): Promise<GithubRepository[]> {
   try {
-    const response = (await axios.get('https://api.github.com/users/aldy505/repos')).data;
+    const response = await (await fetch('https://api.github.com/users/aldy505/repos')).json() as GithubRepository[];
     const randNumber = Math.random() * (response.length - 5);
     return Promise.resolve(response.sort().slice(randNumber, randNumber + 5));
   } catch (error) {

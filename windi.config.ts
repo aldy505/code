@@ -1,14 +1,14 @@
-const aspectRatio = require('windicss/plugin/aspect-ratio');
+import { defineConfig } from 'windicss/helpers';
+import aspectRatio from 'windicss/plugin/aspect-ratio';
+import scrollbar from '@windicss/plugin-scrollbar';
 
-/**
- * @type {import('windicss/helpers').defineConfig}
- */
-module.exports = {
+export default defineConfig({
   darkMode: 'media',
   theme: {
     fontFamily: {
-      display: ['Poppins', 'sans-serif'],
-      body: ['Poppins', 'sans-serif'],
+      display: ['Poppins', 'Inter', 'Roboto', 'sans-serif'],
+      body: ['Poppins', 'Inter', 'Roboto', 'sans-serif'],
+      code: ['IBM Plex Mono', 'JetBrains Mono', 'SF Mono', 'Consolas', 'monospace']
     },
     extend: {
       colors: {
@@ -143,5 +143,6 @@ module.exports = {
   },
   plugins: [
     aspectRatio,
+    scrollbar,
   ],
-};
+});
