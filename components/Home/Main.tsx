@@ -41,7 +41,7 @@ function Home() {
         </div>
 
         <p class="text-base py-2 md:w-2/3">
-          Not a CS student, don't work in IT industry, but most of the time I do web development. Always love to be working on a cool project 😉
+          Not a CS student, yet currently working in the IT industry, but most of the time I do web development. Always love to be working on a cool project 😉
         </p>
 
         <div class="text-sm py-2 lg:pt-8 lg:pb-0 hidden md:block">

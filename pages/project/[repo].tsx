@@ -1,6 +1,6 @@
 import { useParams } from 'solid-app-router';
 import { createSignal, For, onMount, Show } from 'solid-js';
-import marked from 'marked';
+import { marked } from 'marked';
 import Navbar from '../../components/Navbar';
 import { convertCase } from '../../config/case';
 import projects from '../../config/projects';
@@ -55,7 +55,7 @@ function ProjectRepo() {
             {item => <div class="flex-initial pr-2"><Icons name={item}></Icons></div>}
           </For>
         </div>
-        <div innerHTML={marked(data().details)} class="repoContent pb-6 pt-4"></div>
+        <div innerHTML={marked.parse(data().details)} class="repoContent pb-6 pt-4"></div>
       </Show>
     </div>
   );

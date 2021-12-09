@@ -15,6 +15,7 @@ export type Stack =
   'nuxtjs' |
   'postgresql' |
   'redis' |
+  'rust' |
   'sass' |
   'sentry' |
   'solidjs' |
