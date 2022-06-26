@@ -203,6 +203,33 @@ const projects: Project[] = [
     repository: 'https://github.com/aldy505/add-editorconfig',
     role: 'author',
   },
+  {
+    id: 24,
+    type: 'application',
+    title: 'Gitgram',
+    stack: ['typescript'],
+    description: 'Telegram bot for delivering Github notifications',
+    repository: 'https://github.com/teknologi-umum/gitgram',
+    role: 'contributor'
+  },
+  {
+    id: 25,
+    type: 'library',
+    title: 'Nanoid.jl',
+    stack: ['julia'],
+    description: 'Nanoid implementation in Julia',
+    repository: 'https://github.com/aldy505/Nanoid.jl',
+    role: 'author'
+  },
+  {
+    id: 26,
+    type: 'library',
+    title: 'cache2go',
+    stack: ['go'],
+    description: 'A fork of cache2go for in-memory caching in Go with TTL support',
+    repository: 'https://github.com/aldy505/cache2go',
+    role: 'author'
+  }
 ];
 
 export default projects;
