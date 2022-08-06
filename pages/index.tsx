@@ -7,7 +7,7 @@ function Index() {
     <div>
       <Main />
       <Projects />
-      <div class="flex-initial md:hidden py-4">
+      <div class='flex-initial md:hidden py-4'>
         <MadeWithLove />
       </div>
     </div>

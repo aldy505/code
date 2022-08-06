@@ -210,7 +210,7 @@ const projects: Project[] = [
     stack: ['typescript'],
     description: 'Telegram bot for delivering Github notifications',
     repository: 'https://github.com/teknologi-umum/gitgram',
-    role: 'contributor'
+    role: 'contributor',
   },
   {
     id: 25,
@@ -219,7 +219,7 @@ const projects: Project[] = [
     stack: ['julia'],
     description: 'Nanoid implementation in Julia',
     repository: 'https://github.com/aldy505/Nanoid.jl',
-    role: 'author'
+    role: 'author',
   },
   {
     id: 26,
@@ -228,8 +228,8 @@ const projects: Project[] = [
     stack: ['go'],
     description: 'A fork of cache2go for in-memory caching in Go with TTL support',
     repository: 'https://github.com/aldy505/cache2go',
-    role: 'author'
-  }
+    role: 'author',
+  },
 ];
 
 export default projects;

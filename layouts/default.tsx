@@ -36,8 +36,8 @@ function Default() {
           <Meta name={meta?.name ?? ''} property={meta?.property ?? ''} content={meta.content} />
         }</For>
       </MetaProvider>
-      <div class="bg-cool-gray-100 text-black dark:(bg-cool-gray-900 text-white) min-h-screen min-w-full h-full w-full font-body">
-        <div class="container mx-auto px-10 md:px-20 lg:px-32">
+      <div class='bg-cool-gray-100 text-black dark:(bg-cool-gray-900 text-white) min-h-screen min-w-full h-full w-full font-body'>
+        <div class='container mx-auto px-10 md:px-20 lg:px-32'>
           <Routes />
         </div>
       </div>

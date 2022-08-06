@@ -46,16 +46,16 @@ function ProjectRepo() {
       </style>
 
       <Show when={requestOk()} fallback={<div>Please wait...</div>}>
-        <h1 class="text-3xl font-bold text-left py-2">
+        <h1 class='text-3xl font-bold text-left py-2'>
           {data().title}
         </h1>
-        <p class="text-left py-2">{data().description}</p>
-        <div class="flex flex-row flex-wrap items-center">
+        <p class='text-left py-2'>{data().description}</p>
+        <div class='flex flex-row flex-wrap items-center'>
           <For each={data().stack}>
-            {item => <div class="flex-initial pr-2"><Icons name={item}></Icons></div>}
+            {item => <div class='flex-initial pr-2'><Icons name={item} /></div>}
           </For>
         </div>
-        <div innerHTML={marked.parse(data().details)} class="repoContent pb-6 pt-4"></div>
+        <div innerHTML={marked.parse(data().details)} class='repoContent pb-6 pt-4' />
       </Show>
     </div>
   );
