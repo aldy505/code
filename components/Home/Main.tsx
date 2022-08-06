@@ -12,7 +12,7 @@ const link = [
     text: 'Projects',
   },
   {
-    link: 'mailto:aldy505@tutanota.com',
+    link: 'mailto:aldy505@proton.me',
     text: 'Email',
   },
   {
