@@ -1,4 +1,4 @@
-import { useParams } from 'solid-app-router';
+import { useParams } from 'solid-start';
 import { createSignal, For, onMount, Show } from 'solid-js';
 import { marked } from 'marked';
 import Navbar from '../../components/Navbar';
@@ -6,14 +6,13 @@ import { convertCase } from '../../config/case';
 import projects from '../../config/projects';
 import { GithubRepository } from '../../types/github';
 import { Project } from '../../types/project';
-import 'solid-styled-jsx';
-import css from '../../styles/repo.sass';
+import '../../styles/repo.sass';
 import Icons from '../../components/Icons';
 
 async function fetchData(repo: string): Promise<Project> {
   const findData = projects.find(i => convertCase(i.title) === repo);
 
-  if (!findData.repository) {
+  if (findData?.repository === undefined) {
     return { ...findData, details: 'Oops, sorry. Nothing to see here yet.' };
   }
 
@@ -41,9 +40,6 @@ function ProjectRepo() {
   return (
     <div>
       <Navbar />
-      <style jsx dynamic={false} global={false}>
-        {`${css}`}
-      </style>
 
       <Show when={requestOk()} fallback={<div>Please wait...</div>}>
         <h1 class='text-3xl font-bold text-left py-2'>
@@ -55,7 +51,7 @@ function ProjectRepo() {
             {item => <div class='flex-initial pr-2'><Icons name={item} /></div>}
           </For>
         </div>
-        <div innerHTML={marked.parse(data().details)} class='repoContent pb-6 pt-4' />
+        <div innerHTML={marked.parse(data().details ?? '')} class='repoContent pb-6 pt-4' />
       </Show>
     </div>
   );

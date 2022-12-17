@@ -1,21 +1,23 @@
 import { defineConfig } from 'vite';
-import solidPlugin from 'vite-plugin-solid';
+import solid from 'solid-start/vite';
+import cloudflare from 'solid-start-cloudflare-pages';
 import windiCSS from 'vite-plugin-windicss';
 
 export default defineConfig({
   publicDir: 'static',
   plugins: [
-    solidPlugin(),
+    solid({
+      adapter: cloudflare({ sourceMap: false }),
+      routesDir: './pages',
+    }),
     windiCSS({
       scan: {
-        dirs: ['./components', './layouts', './pages'],
+        dirs: ['./src'],
       },
     }),
   ],
   build: {
-    target: 'esnext',
-    polyfillDynamicImport: false,
+    target: 'modules',
     emptyOutDir: true,
-    outDir: 'dist',
   },
 });

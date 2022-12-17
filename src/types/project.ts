@@ -22,7 +22,14 @@ export type Stack =
   'tailwindcss' |
   'typescript' |
   'vuejs' |
-  'svelte'
+  'svelte' |
+  'c' |
+  'c++' |
+  'csharp' |
+  'crystal' |
+  'kafka' |
+  'prometheus' |
+  'bash'
 
 export interface Project {
   id: number;

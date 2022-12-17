@@ -92,3 +92,5 @@ sw.*
 *.code-workspace
 
 .routify
+.solid
+functions
