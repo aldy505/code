@@ -1,4 +1,3 @@
-
 interface Props {
   link: string;
   text: string;

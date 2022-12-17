@@ -1,11 +1,6 @@
 import { RouteDefinition, useRoutes } from 'solid-app-router';
 import { For, lazy } from 'solid-js';
 import { MetaProvider, Title, Link, Meta } from 'solid-meta';
-import head from '../config/head';
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/700.css';
-import '@fontsource/ibm-plex-mono/400.css';
-import '../styles/default.sass';
 
 const route: RouteDefinition[] = [
   {
@@ -36,11 +31,9 @@ function Default() {
           <Meta name={meta?.name ?? ''} property={meta?.property ?? ''} content={meta.content} />
         }</For>
       </MetaProvider>
-      <div class='bg-cool-gray-100 text-black dark:(bg-cool-gray-900 text-white) min-h-screen min-w-full h-full w-full font-body'>
-        <div class='container mx-auto px-10 md:px-20 lg:px-32'>
-          <Routes />
-        </div>
-      </div>
+
+      <Routes />
+
     </>
   );
 }

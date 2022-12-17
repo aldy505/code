@@ -1,18 +1,20 @@
 import { For, Show } from 'solid-js';
 import Icons from './Icons';
 import { Project } from '../types/project';
-import { NavLink } from 'solid-app-router';
+import { A } from 'solid-start';
 import { convertCase } from '../config/case';
+import Github from './Icons/Github';
+import ArrowRight from './Icons/ArrowRight';
 
 function ProjectCard(project: Project) {
   return (
     <div class='rounded-lg bg-steel-100 hover:bg-wisteria-200 lg:(opacity-70 p-4) p-3 hover:opacity-100 dark:(bg-steel-900 hover:bg-wisteria-900) transition duration-500 ease-in-out'>
       <div class='flex flex-col'>
         <div class='flex-1 py-2'>
-          <NavLink href={'/project/' + convertCase(project.title)}>
+          <A href={'/project/' + convertCase(project.title)}>
             <h2 class='text-xl font-bold'>{project.title}</h2>
             <p class='text-base'>{project.description}</p>
-          </NavLink>
+          </A>
         </div>
         <div class='flex-1 py-2'>
           <div class='flex-col md:flex-row items-center'>
@@ -32,7 +34,7 @@ function ProjectCard(project: Project) {
             <Show when={project.repository}>
               <div class='flex-initial pr-2'>
                 <a href={project.repository}>
-                  <Icons name='github' />
+                  <Github />
                 </a>
               </div>
               <div class='flex-initial pr-4 text-xs'>
@@ -42,7 +44,7 @@ function ProjectCard(project: Project) {
             <Show when={project.website}>
               <div class='flex-initial pr-2'>
                 <a href={project.website}>
-                  <Icons name='arrow-right' />
+                  <ArrowRight />
                 </a>
               </div>
               <div class='flex-initial pr-2 text-xs'>

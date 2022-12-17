@@ -2,12 +2,12 @@ import { Project } from '../types/project';
 
 const projects: Project[] = [
   {
-    id: 1,
-    type: 'library',
-    stack: ['typescript'],
-    title: 'Generate Passphrase',
-    description: 'Secure random passphrase for Node.js',
-    repository: 'https://github.com/aldy505/generate-passphrase',
+    id: 0,
+    type: 'application',
+    stack: ['typescript', 'nodejs', 'go', 'csharp', 'docker', 'sentry'],
+    title: 'Pesto',
+    description: 'Remote Code Execution Engine that lets you execute any piece of code on a remote server via REST API',
+    repository: 'https://github.com/teknologi-umum/pesto',
     role: 'author',
   },
   {
@@ -17,6 +17,15 @@ const projects: Project[] = [
     title: 'Bob',
     description: 'SQL query builder as an extension of Squirrel',
     repository: 'https://github.com/aldy505/bob',
+    role: 'author',
+  },
+  {
+    id: 1,
+    type: 'library',
+    title: 'Nanoid.jl',
+    stack: ['julia'],
+    description: 'Nanoid implementation in Julia',
+    repository: 'https://github.com/aldy505/Nanoid.jl',
     role: 'author',
   },
   {
@@ -38,7 +47,7 @@ const projects: Project[] = [
     role: 'author',
   },
   {
-    id: 5,
+    id: 6,
     type: 'application',
     stack: ['go', 'typescript', 'svelte', 'tailwindcss', 'postgresql', 'redis', 'sentry', 'docker'],
     title: 'Jokes Bapak2',
@@ -48,7 +57,7 @@ const projects: Project[] = [
     role: 'author',
   },
   {
-    id: 6,
+    id: 13,
     type: 'library',
     stack: ['typescript'],
     title: 'Tinyhttp',
@@ -67,24 +76,6 @@ const projects: Project[] = [
   },
   {
     id: 8,
-    type: 'application',
-    stack: ['vuejs', 'nuxtjs', 'bootstrap'],
-    title: 'Pesanyuk',
-    description: 'Store-management application for Indonesian small to medium businesses',
-    website: 'https://pesanyuk.id',
-    role: 'contributor',
-  },
-  {
-    id: 9,
-    type: 'application',
-    stack: ['javascript', 'redis', 'mongodb', 'sentry', 'docker'],
-    title: 'Teknologi Umum Bot',
-    description: 'A simple telegram bot for managing daily poll & programming-related quizes',
-    repository: 'https://github.com/teknologi-umum/bot',
-    role: 'author',
-  },
-  {
-    id: 10,
     type: 'application',
     stack: ['typescript', 'nodejs', 'solidjs', 'sentry', 'docker'],
     title: 'Graphene',
@@ -113,12 +104,30 @@ const projects: Project[] = [
     role: 'author',
   },
   {
-    id: 15,
+    id: 5,
     type: 'application',
     stack: ['vuejs', 'nuxtjs', 'tailwindcss'],
     title: 'Cbusters',
     description: 'Disinfecting service for workspace',
     website: 'https://www.cbusters.com',
+    role: 'author',
+  },
+  {
+    id: 10,
+    type: 'application',
+    stack: ['vuejs', 'nuxtjs', 'bootstrap'],
+    title: 'Pesanyuk',
+    description: 'Store-management application for Indonesian small to medium businesses',
+    website: 'https://pesanyuk.id',
+    role: 'contributor',
+  },
+  {
+    id: 9,
+    type: 'application',
+    stack: ['javascript', 'redis', 'mongodb', 'sentry', 'docker'],
+    title: 'Teknologi Umum Bot',
+    description: 'A simple telegram bot for managing daily poll & programming-related quizes',
+    repository: 'https://github.com/teknologi-umum/bot',
     role: 'author',
   },
   {
@@ -195,6 +204,15 @@ const projects: Project[] = [
     role: 'author',
   },
   {
+    id: 12,
+    type: 'library',
+    stack: ['typescript'],
+    title: 'Generate Passphrase',
+    description: 'Secure random passphrase for Node.js',
+    repository: 'https://github.com/aldy505/generate-passphrase',
+    role: 'author',
+  },
+  {
     id: 23,
     type: 'application',
     title: 'add-editorconfig',
@@ -212,15 +230,7 @@ const projects: Project[] = [
     repository: 'https://github.com/teknologi-umum/gitgram',
     role: 'contributor',
   },
-  {
-    id: 25,
-    type: 'library',
-    title: 'Nanoid.jl',
-    stack: ['julia'],
-    description: 'Nanoid implementation in Julia',
-    repository: 'https://github.com/aldy505/Nanoid.jl',
-    role: 'author',
-  },
+
   {
     id: 26,
     type: 'library',
