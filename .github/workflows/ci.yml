@@ -17,10 +17,10 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout code
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
       - name: Setup nodejs
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v4
         with:
           node-version: 16.x
 
@@ -34,9 +34,9 @@ jobs:
         run: npm run generate
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
+        uses: github/codeql-action/init@v2
         with:
           languages: javascript
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
+        uses: github/codeql-action/analyze@v2
